@@ -86,7 +86,7 @@ def create_plot_image(df: pd.DataFrame,id,duty_date,cab_no,tota_hrs,total_kms):
     new_image = Image.new("RGB", (new_width, new_height), "white")
     new_image.paste(image, (0, top_padding))
     draw = ImageDraw.Draw(new_image)
-    font = ImageFont.truetype("fonts/arial.ttf", 75)  # Adjust font size and type as needed
+    font = ImageFont.truetype("/mount/src/wertyui/fonts/arial.ttf", 75)  # Adjust font size and type as needed
     draw.text((new_width / 2, 100), f"{duty_date} | {cab_no}", font=font, fill="black", anchor="mm")
     draw.text((new_width / 2, new_height - bottom_padding - 50), f"Total {total_kms} kms | Total time : {tota_hrs} Hrs", font=font, fill="black", anchor="mm")
     final_image_path = f'imgs/gr_{id}.jpg'
