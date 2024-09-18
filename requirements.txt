@@ -3,7 +3,5 @@ openpyxl
 matplotlib
 streamlit
 pillow
-shutil
 matplotlib
 zipfile
-random
